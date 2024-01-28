@@ -1,9 +1,9 @@
 # 如何把幻兽帕鲁的私人服务器存档转移到个人电脑上以继续游玩
-虽然现在谈这个有些早，但是当热度过去之后，肯定不少人会面对这个问题
-当然，方法是有的，只是目前有些麻烦，如果有人喜欢写小工具的话可以考虑做个一键工具什么的
-先说一点小理论知识：
-其实多少要感谢0.1.2版本的退公会离线用户“坏档”BUG，如果不是这个BUG，恐怕解存档工具不会哪么快出来。
-事实上，上面这个BUG，和服务器存档改单机的核心问题都是一个——即GUID保持一致，涉及到的GUID事实上有两个，一个是标识你存档名的GUID，另一个是代表你人在服务器里的Instance GUID，这两个保持一致即可（我想现行的个人转专用服务器存档教程也是类似的问题，只不过那边更麻烦一点）。
+虽然现在谈这个有些早，但是当热度过去之后，肯定不少人会面对这个问题</p>
+当然，方法是有的，只是目前有些麻烦，如果有人喜欢写小工具的话可以考虑做个一键工具什么的</p>
+先说一点小理论知识：</p>
+其实多少要感谢0.1.2版本的退公会离线用户“坏档”BUG，如果不是这个BUG，恐怕解存档工具不会哪么快出来。</p>
+事实上，上面这个BUG，和服务器存档改单机的核心问题都是一个——即GUID保持一致，涉及到的GUID事实上有两个，一个是标识你存档名的GUID，另一个是代表你人在服务器里的Instance GUID，这两个保持一致即可（我想现行的个人转专用服务器存档教程也是类似的问题，只不过那边更麻烦一点）。</p>
 所以，要做的事情其实很简单，和你的服主要到服务器上的存档文件，然后，在 https://github.com/cheahjs/palworld-save-tools 工具的帮助下：
 1. 把Level.sav文件转换成JSON并打开（小心，你需要足够的硬盘空间和一个能吃下可能达数G文本的文本编辑器——Visual code能打开，但是可能应该太长而不支撑全局替换）;
 2. 然后，你需要找到你自己的存档GUID，全局搜索你的“昵称”，应该就可以找到（应该有两处，一处是基本玩家信息CharacterSaveParameterMap，另一处是公会信息，但是都有存档GUID）;
@@ -27,16 +27,16 @@ X:\Users\[用户名]\AppData\Local\Pal\Saved\SaveGames\[SteamID]\[世界存档ID
     - 00000000000000000000000000000001.sav 文件——你改好的自己的存档文件
     - 以及其他人的存档，你可以留着，也可以删了，不碍事
 
-这样就完成了，运行帕鲁，单人模式下应该能看到追加的新世界，进入即可。
+这样就完成了，运行帕鲁，单人模式下应该能看到追加的新世界，进入即可。</p>
 我已经成功了，所以这套方案是没问题的。如果有人失败的话，请检查是不是还有漏掉的GUID没改：请记住，核心就是保持各个文件中对应的GUID一致，另外如果你不放心操作前请备份文件，以防万一。
 
 
 # How to transfer the private dedicated server save file of PalWorld to a single mode for continued gameplay
-Although it may be a bit early to discuss this now, after the hype has passed, many people will definitely face this issue
-Of course, there is a workaround. If someone can make a one-button script/tool would be nice.
-First, a little theoretical knowledge:
-In fact, we should be somewhat "thankful" for the "corrupt save" BUG of the 0.1.2 version, without this BUG, the save file tool might not have come out so quickly.
-In fact, the above-mentioned BUG and the core issue of moving the server save file to single mode are the same - that is, keeping the GUID consistent. There are actually two GUIDs involved, one is the GUID that identifies your save data, and the other is the Instance GUID that represents you in the server, so what need to do is: make these two consistent (I think the current tutorial for converting personal save to dedicated server is a similar issue, but a bit more complicated over there).
+Although it may be a bit early to discuss this now, after the hype has passed, many people will definitely face this issue.</p>
+Of course, there is a workaround. If someone can make a one-button script/tool would be nice.</p>
+First, a little theoretical knowledge:</p>
+In fact, we should be somewhat "thankful" for the "corrupt save" BUG of the 0.1.2 version, without this BUG, the save file tool might not have come out so quickly.</p>
+In fact, the above-mentioned BUG and the core issue of moving the server save file to single mode are the same - that is, keeping the GUID consistent. There are actually two GUIDs involved, one is the GUID that identifies your save data, and the other is the Instance GUID that represents you in the server, so what need to do is: make these two consistent (I think the current tutorial for converting personal save to dedicated server is a similar issue, but a bit more complicated over there).</p>
 So, the things to do are actually very simple, got the save files from your server host, and then, with the help of the tool at https://github.com/cheahjs/palworld-save-tools:
 1. Convert the Level.sav file to JSON and open it (be careful, you need enough free disk space and a text editor that can handle possibly several GB of text - Visual code can open it, but it may be too long and not support Replace All function);
 2. Then, you need to find your own save file GUID, search your "nickname" globally in Level.sav.json, you should be able to find it (there should be two places, one is CharacterSaveParameterMap, the other is guild information, either is fine);
@@ -60,5 +60,5 @@ X:\Users\[username]\AppData\Local\Pal\Saved\SaveGames\[SteamID]\[world ID]:
     - 00000000000000000000000000000001.sav file - your modified save file
     - and other people's save files, you can keep them or delete them, it doesn't matter
 
-That's it, once done, run PalWorld, in single mode you should see the newly added world, just enter and play.
+That's it, once done, run PalWorld, in single mode you should see the newly added world, just enter and play.</p>
 I have succeeded, so this solution is reliable. If someone fails, please check if there are any missed GUIDs to change: remember, the key is to keep the corresponding GUIDs consistent in each file, and if you are not confident before operating, please back up the files, just in case.
