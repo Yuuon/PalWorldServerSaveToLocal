@@ -17,7 +17,7 @@
 10. WorldOption.sav可以从其他单机存档里复制一个就行;
 
 让我们最后再确认一下你的存档文件夹下应该有哪些东西：
-X:\Users\[用户名]\AppData\Local\Pal\Saved\SaveGames\[SteamID]\[世界存档ID]下：
+X:\Users\[用户名]\AppData\Local\Pal\Saved\SaveGames\\[SteamID]\\[世界存档ID]下：
 - 修改过的Level.sav文件
 - 可以修改的LevelMeta.sav文件
 - 不要动的LocalData.sav文件（你的图鉴进图，地图迷雾在这里，如果出问题了，去backup里找备份）
@@ -50,7 +50,7 @@ So, the things to do are actually very simple, got the save files from your serv
 10. You can just copy WorldOption.sav from another single mode save file;
 
 Let's confirm once again what should be in your save file folder:
-X:\Users\[username]\AppData\Local\Pal\Saved\SaveGames\[SteamID]\[world ID]:
+X:\Users\[username]\AppData\Local\Pal\Saved\SaveGames\\[SteamID]\\[world ID]:
 - Modified Level.sav file
 - Optional Modified LevelMeta.sav file
 - Do not touch LocalData.sav file (your collection progress, map view is here, if there is a problem, look for backups in the backup folder)
